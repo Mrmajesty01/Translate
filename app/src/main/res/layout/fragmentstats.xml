@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Sunan kaya"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/name"
+                    android:hint="sunan kaya"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:textAlignment="center"
+                    android:inputType="textNoSuggestions"
+                    android:background="@drawable/box"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Tsohon farashin saye"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/oldprice"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:hint= "tsohon farashi saye"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Tsohon farahin sayarwa"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/newprice"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:inputType="numberDecimal"
+                    android:hint="Tsohon farahin sayarwa"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Riba a kudi"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    />
+
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/profit"
+                    android:enabled="false"
+                    android:hint="Riba a kudi"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Riba a %"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/profitper"
+                    android:enabled="false"
+                    android:hint="Riba a %"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Sabon farashin saya"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/lastestprice"
+                    android:hint="sabon farshin saya"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Sabon farashin sayarwa"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="14sp"
+
+                    />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/estimateselling"
+                    android:hint="sabon farashin sayarwa"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Riba a kudi"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    />
+
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/estprofit"
+                    android:enabled="false"
+                    android:hint="Riba a kudi"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:text="Riba a %"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/box"
+                    android:id="@+id/estprofitper"
+                    android:enabled="false"
+                    android:hint="Riba a %"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_marginTop="40dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="Save"
+                android:textSize="20sp"
+                android:background="@drawable/button"
+                android:id="@+id/save"
+                />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="sabon kaya"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/newKaya"
+                android:background="@drawable/button"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

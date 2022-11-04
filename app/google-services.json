@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591715415357",
+    "project_id": "translate-a506c",
+    "storage_bucket": "translate-a506c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591715415357:android:685498c7a9771be3f14154",
+        "android_client_info": {
+          "package_name": "com.majestyinc.translate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591715415357-l774cs0bjctrv0shagd28vkubgkkh494.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxCILGeC-5BcO-1ORBktWZjC4xzMuv7NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591715415357-l774cs0bjctrv0shagd28vkubgkkh494.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

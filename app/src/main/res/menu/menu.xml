@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Calculator"
+        android:icon="@drawable/ic_baseline_calculate_24"
+        app:showAsAction="always"
+        android:titleCondensed="Calculator"
+        android:id="@+id/cal"/>
+
+    <item android:title="Farashi"
+        android:icon="@drawable/ic_baseline_archive_24"
+        app:showAsAction="always"
+        android:titleCondensed="Farashi"
+        android:id="@+id/arch"/>
+
+
+    <item android:title="Kayan Aiki"
+        android:icon="@drawable/ic_baseline_construction_24"
+        app:showAsAction="always"
+        android:titleCondensed="Kayan Aiki"
+        android:id="@+id/construct"/>
+
+
+    <item android:title="Karin Bayani"
+        android:icon="@drawable/ic_baseline_info_24"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:titleCondensed="Karin Bayani"
+        android:id="@+id/info"/>
+
+
+
+</menu>

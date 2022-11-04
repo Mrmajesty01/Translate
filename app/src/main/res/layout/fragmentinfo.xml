@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="#ff0000"
+                android:text="How to use Calculator"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="There are four bottom icons with the following labels calculator, farashi, Kayan Aiki and Karin bayani but the calcuator is the first screen shown to the user upon entering the application,if you click on the other icons it will take you to the layout, the calculator functionalities iclude: translation of an number typed into english language(in red color) and hausa language(in black color) respectively, the user can be able to perform basic arithmetic operations such as addition, subtraction, multiplication and division and the result of the operation will be shown and also translated in english and hausa language"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="#ff0000"
+                android:text="How to use Farashi"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="To make use of farashi you click the bottom icon with the label farashi, farashi is a stock management system that allows you to add name of goods, price you bought the goods, the price you sell the goods, and it will save it for you and calculate your profit for you both in value and percentage, when the price of a certain good change it allows you to add the new price of the good and based on that price it will automatically show you the price you should sell the good based on the old price you bought and sold and also your old profit, to add new goods you click on sabon kaya, to save the new price of goods that exist add the new price and click save"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="#ff0000"
+                android:text="How to use Kayan Aiki"></TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="To make use of kayan aiki click the icon with the label kayan aiki, kayan aiki is a system that allows you to add the name of the kayan aiki, the size of it and also the items related to the kayan aiki,the size of the item also,kayan aiki is a system that helps you determine that if i have so and so kaya and item of such size and i am considering to build or make a certain thing of so size, kayan aiki will automatically give you the exact amount of things you need for the things you want to build or make"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"></TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
