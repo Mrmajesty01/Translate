@@ -211,6 +211,7 @@ public class fragmentCalculator extends Fragment {
                     english.setText(convert(Integer.parseInt(hiddin.getText().toString())));
                     hausa.setText(hausaconvert(Integer.parseInt(hiddin.getText().toString())));
                     double c = Double.parseDouble(hiddin.getText().toString());
+                    int n = (int) Double.parseDouble(hiddin.getText().toString());
                     numbers.setText(getFormatedAmount(c));
                     calculations.append(val);
                     }
@@ -534,6 +535,7 @@ public class fragmentCalculator extends Fragment {
             public void onClick(View view) {
 
                 try {
+                    bracketChecker = false;
                     numbers.setText("");
                     english.setText("");
                     hausa.setText("");
@@ -665,6 +667,7 @@ public class fragmentCalculator extends Fragment {
             @Override
             public void onClick(View view) {
                 try {
+                    bracketChecker = false;
                     numbers.setText("");
                     english.setText("");
                     hausa.setText("");
@@ -692,7 +695,7 @@ public class fragmentCalculator extends Fragment {
                     }
 
 
-//                    double k = Double.parseDouble(finalResult);
+                    double k = Double.parseDouble(finalResult);
 //                    String o = String.valueOf(k);
 //
 //                    hiddin.setText(finalResult);
@@ -702,9 +705,9 @@ public class fragmentCalculator extends Fragment {
 //                    int sn = Integer.parseInt(somenumber);
 
 
-                        calculations.setText(getFormatedAmount(Double.parseDouble(finalResult)));
-                        numbers.setText(getFormatedAmount(Double.parseDouble((finalResult))));
-                        hiddin.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+//                        calculations.setText(getFormatedAmount(Double.parseDouble(finalResult)));
+//                        numbers.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+//                        hiddin.setText(getFormatedAmount(Double.parseDouble((finalResult))));
                         String somenumber = finalResult;
                         somenumber = somenumber.substring(somenumber.indexOf(".") + 1);
                         Double sn = Double.parseDouble(somenumber);
@@ -714,17 +717,25 @@ public class fragmentCalculator extends Fragment {
 
                            if (somenumber.contains("0"))
                             {
-                               english.setText(convert(Double.parseDouble(f)));
-                               hausa.setText(hausaconvert(Double.parseDouble(f)));
+                                calculations.setText(getFormatedAmount(Double.parseDouble(finalResult)));
+                                numbers.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+                                hiddin.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+                                english.setText(convert(Double.parseDouble(f)));
+                                hausa.setText(hausaconvert(Double.parseDouble(f)));
                             }
                            else if (!somenumber.contains("0") && somenumber.length()==1)
                             {
+                                calculations.setText(getFormatedAmount(Double.parseDouble(finalResult)));
+                                numbers.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+                                hiddin.setText(getFormatedAmount(Double.parseDouble((finalResult))));
                                 english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumber)));
                                 hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumber)));
                             }
                             else
                             {
-
+                                numbers.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+                                hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+                                calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
                                 String somenumberi = hiddin.getText().toString();
                                 somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1, somenumberi.indexOf(".") + 3);
                                 english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
