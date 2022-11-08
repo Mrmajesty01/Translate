@@ -188,8 +188,9 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/box"
+                    android:background="@drawable/et"
                     android:id="@+id/lastestprice"
+                    android:textColorHint="@android:color/holo_red_dark"
                     android:hint="sabon farshin saya"
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
@@ -218,7 +219,8 @@
                     android:enabled="false"
                     android:inputType="numberDecimal"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/box"
+                    android:background="@drawable/et"
+                    android:textColorHint="@android:color/holo_red_dark"
                     android:id="@+id/estimateselling"
                     android:hint="sabon farashin sayarwa"
                     android:textAlignment="center" />
@@ -249,9 +251,10 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/box"
+                    android:background="@drawable/et"
                     android:id="@+id/estprofit"
                     android:enabled="false"
+                    android:textColorHint="@android:color/holo_red_dark"
                     android:hint="Riba a kudi"
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
@@ -278,10 +281,11 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginStart="20dp"
-                    android:background="@drawable/box"
+                    android:background="@drawable/et"
                     android:id="@+id/estprofitper"
                     android:enabled="false"
                     android:hint="Riba a %"
+                    android:textColorHint="@android:color/holo_red_dark"
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
 

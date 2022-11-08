@@ -200,12 +200,12 @@ public class fragmentCalculator extends Fragment {
                         double s = Double.parseDouble(hiddin.getText().toString());
                         int n = (int) Double.parseDouble(hiddin.getText().toString());
                         double c = Double.parseDouble(hiddin.getText().toString());
-                        String o = String.valueOf(c);
+                        String o = String.valueOf(n);
                         String somenumber = String.valueOf(s);
                         somenumber = somenumber.substring(somenumber.indexOf(".") + 1);
                         calculations.append(val);
-                        english.setText(convert(Double.parseDouble(o)) + " point " + convert(Double.parseDouble(somenumber)));
-                        hausa.setText(hausaconvert(Double.parseDouble(o))+" da digo "+hausaconvert(Double.parseDouble(somenumber)));
+                        english.setText(convert(Double.parseDouble(o)) + " point " + convert(Double.parseDouble(somenumber+"0")));
+                        hausa.setText(hausaconvert(Double.parseDouble(o))+" da digo "+hausaconvert(Double.parseDouble(somenumber+"0")));
                     }
                     else {
                     english.setText(convert(Integer.parseInt(hiddin.getText().toString())));
@@ -670,7 +670,6 @@ public class fragmentCalculator extends Fragment {
                     hausa.setText("");
                     hiddin.setText("");
                     String process = calculations.getText().toString();
-
                     process = process.replaceAll("x", "*");
                     process = process.replaceAll("%", "/100");
                     process = process.replaceAll("÷", "/");
@@ -692,50 +691,93 @@ public class fragmentCalculator extends Fragment {
 
                     }
 
-                    int s = (int) Double.parseDouble(finalResult);
-                    double k = Double.parseDouble(finalResult);
-                    String o = String.valueOf(k);
-                    String f = String.valueOf(s);
-                    hiddin.setText(finalResult);
-                    double c = Double.parseDouble(finalResult);
-                    String fnumber = finalResult;
-                    fnumber = fnumber.substring(fnumber.indexOf(".") + 1);
-                    String somenumber = hiddin.getText().toString();
-                    somenumber = somenumber.substring(somenumber.indexOf(".") + 1);
-                    int sn = Integer.parseInt(somenumber);
 
-                    if (finalResult.contains(".") && somenumber.equals("0") ) {
-                        numbers.setText(getFormatedAmount(c));
-                        calculations.setText(getFormatedAmount(Double.parseDouble(String.valueOf(k))));
-                        hiddin.setText(getFormatedAmount(Double.parseDouble(String.valueOf(k))));
-                        english.setText(convert(Double.parseDouble(String.valueOf(s))));
-                        hausa.setText(hausaconvert(Double.parseDouble(String.valueOf(s))));
-                        numbers.setText(getFormatedAmount(c));
+//                    double k = Double.parseDouble(finalResult);
+//                    String o = String.valueOf(k);
+//
+//                    hiddin.setText(finalResult);
+//                    double c = Double.parseDouble(finalResult);
+//                    String somenumber = hiddin.getText().toString();
+//                    somenumber = somenumber.substring(somenumber.indexOf(".") + 1);
+//                    int sn = Integer.parseInt(somenumber);
 
-                    }
 
-                    else if(finalResult.contains(".") && !somenumber.equals("0"))
-                    {
-                        hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
-                        String somenumberi = hiddin.getText().toString();
-                        somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1);
-                        english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
-                        hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumberi)));
-                        calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
-                        numbers.setText(hiddin.getText().toString());
+                        calculations.setText(getFormatedAmount(Double.parseDouble(finalResult)));
+                        numbers.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+                        hiddin.setText(getFormatedAmount(Double.parseDouble((finalResult))));
+                        String somenumber = finalResult;
+                        somenumber = somenumber.substring(somenumber.indexOf(".") + 1);
+                        Double sn = Double.parseDouble(somenumber);
+                        int s = (int) Double.parseDouble(finalResult);
+                        String f = String.valueOf(s);
 
-                    }
 
-                    else if(finalResult.contains(".") && !somenumber.equals("0") ){
-                        hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
-                        String somenumberi = hiddin.getText().toString();
-                        somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1, somenumberi.indexOf(".") + 3);
-                        english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
-                        hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumberi)));
-                        calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
-                        numbers.setText(hiddin.getText().toString());
+                           if (somenumber.contains("0"))
+                            {
+                               english.setText(convert(Double.parseDouble(f)));
+                               hausa.setText(hausaconvert(Double.parseDouble(f)));
+                            }
+                           else if (!somenumber.contains("0") && somenumber.length()==1)
+                            {
+                                english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumber)));
+                                hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumber)));
+                            }
+                            else
+                            {
 
-                    }
+                                String somenumberi = hiddin.getText().toString();
+                                somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1, somenumberi.indexOf(".") + 3);
+                                english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
+                                hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumberi)));
+                            }
+
+
+
+
+//                    if (finalResult.contains(".")) {
+//                       if ( somenumber.equals("0")) {
+//                            numbers.setText(getFormatedAmount(c));
+//                            calculations.setText(getFormatedAmount(Double.parseDouble(String.valueOf(k))));
+//                            hiddin.setText(getFormatedAmount(Double.parseDouble(String.valueOf(k))));
+//                            english.setText(convert(Double.parseDouble(String.valueOf(s))));
+//                            hausa.setText(hausaconvert(Double.parseDouble(String.valueOf(s))));
+//                            numbers.setText(getFormatedAmount(c));
+//
+//                       }
+////                       else if(!somenumber.equals("0"))  {
+////                            numbers.setText(getFormatedAmount(c));
+////                            hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+////                            english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumber)));
+////                            hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumber)));
+////                            calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+////
+////                        }
+//
+//                       else  {
+//                            numbers.setText(getFormatedAmount(c));
+//                            hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+//                            String somenumberi = hiddin.getText().toString();
+//                            somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1, somenumberi.indexOf(".") + 3);
+//                            english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
+//                            hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumberi)));
+//                            calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+//
+//                        }
+//                    }
+
+//                    else
+//                    {
+//                        numbers.setText(getFormatedAmount(c));
+//                        hiddin.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+//                        String somenumberi = hiddin.getText().toString();
+//                        somenumberi = somenumberi.substring(somenumberi.indexOf(".") + 1, somenumberi.indexOf(".") + 3);
+//                        english.setText(convert(Double.parseDouble(f)) + " point " + convert(Double.parseDouble(somenumberi)));
+//                        hausa.setText(hausaconvert(Double.parseDouble(f)) + " da digo " + hausaconvert(Double.parseDouble(somenumberi)));
+//                        calculations.setText(getFormatedAmount(Double.parseDouble(String.format("%s", new DecimalFormat("##.##").format(k)))));
+//
+//                    }
+
+
                     }
 
 
