@@ -22,7 +22,7 @@
             android:maxLength="60"
             android:visibility="gone"
             android:id="@+id/hiddin"
-            tools:ignore="RtlCompat" />
+            />
 
         <TextView
             android:layout_marginTop="5dp"
@@ -35,7 +35,7 @@
             android:id="@+id/calculations"
             android:layout_marginRight="5dp"
             android:hint="lissafi"
-            tools:ignore="RtlCompat" />
+             />
 
         <TextView
             android:layout_width="match_parent"
@@ -485,7 +485,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/modulo"
                 android:layout_width="70dp"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="10dp"
                 app:cardBackgroundColor="#00BCD4"
