@@ -1,79 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@android:color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/hiddin"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:maxLength="60"
-            android:textAlignment="viewEnd"
             android:textColor="@color/white"
+            android:textAlignment="viewEnd"
             android:textSize="25sp"
+            android:maxLength="60"
             android:visibility="gone"
+            android:id="@+id/hiddin"
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/calculations"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp"
+            android:maxLength="60"
+            android:id="@+id/calculations"
             android:layout_marginRight="5dp"
             android:hint="lissafi"
-            android:maxLength="60"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/number"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:textColor="@color/black"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp"
+            android:maxLength="60"
+            android:id="@+id/number"
             android:layout_marginRight="5dp"
             android:hint="lamba"
-            android:maxLength="60"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/english"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
             android:layout_marginRight="5dp"
-            android:hint="turanchi"
+            android:layout_height="90dp"
             android:textAlignment="viewEnd"
+            android:textSize="15sp"
             android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp" />
+            android:id="@+id/english"
+            android:hint="turanchi"
+            />
 
         <TextView
-            android:id="@+id/hausa"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
             android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:hint="hausa"
-            android:textAlignment="viewEnd"
+            android:layout_height="90dp"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textAlignment="viewEnd"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:hint="hausa"
+            android:id="@+id/hausa"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -82,11 +79,11 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/clear"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                app:cardBackgroundColor="@android:color/darker_gray"
-                app:cardCornerRadius="35dp">
+                app:cardCornerRadius="35dp"
+                android:id="@+id/clear"
+                app:cardBackgroundColor="@android:color/darker_gray">
 
                 <TextView
                     android:id="@+id/tclear"
@@ -101,26 +98,32 @@
             </androidx.cardview.widget.CardView>
 
 
+
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/bracket"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="@android:color/darker_gray"
-                app:cardCornerRadius="35dp">
+                android:layout_marginStart="10dp"
+                android:id="@+id/bracket"
+                app:cardBackgroundColor="@android:color/darker_gray">
 
                 <TextView
-                    android:id="@+id/tbracket"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="()"
                     android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/tbracket"
+                    android:text="()"
+                    android:textSize="25sp"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    />
 
             </androidx.cardview.widget.CardView>
+
+
+
 
 
             <androidx.cardview.widget.CardView
@@ -132,16 +135,17 @@
                 app:cardCornerRadius="35dp">
 
                 <TextView
-                    android:id="@+id/tdivide"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="÷"
+                    android:id="@+id/tdivide"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="30sp" />
 
             </androidx.cardview.widget.CardView>
+
 
 
             <androidx.cardview.widget.CardView
@@ -164,7 +168,11 @@
             </androidx.cardview.widget.CardView>
 
 
+
         </LinearLayout>
+
+
+
 
 
         <LinearLayout
@@ -174,45 +182,48 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/number1"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:id="@+id/number1"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
-                    android:id="@+id/tnumber1"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="1"
                     android:textAlignment="center"
+                    android:id="@+id/tnumber1"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
 
             </androidx.cardview.widget.CardView>
 
 
+
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/number2"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:id="@+id/number2"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
-                    android:id="@+id/tnumber2"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="2"
                     android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/tnumber2"
+                    android:text="2"
+                    android:textSize="25sp"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    />
 
             </androidx.cardview.widget.CardView>
 
@@ -239,6 +250,7 @@
             </androidx.cardview.widget.CardView>
 
 
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/plus"
                 android:layout_width="70dp"
@@ -263,6 +275,9 @@
         </LinearLayout>
 
 
+
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -270,12 +285,12 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/number4"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:id="@+id/number4"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
                     android:id="@+id/tnumber4"
@@ -301,11 +316,11 @@
                 app:cardCornerRadius="35dp">
 
                 <TextView
-                    android:id="@+id/tnumber5"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="5"
+                    android:id="@+id/tnumber5"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
@@ -313,15 +328,15 @@
             </androidx.cardview.widget.CardView>
 
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/number6"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
-
+                android:layout_marginTop="10dp"
+                android:id="@+id/number6"
+                app:cardBackgroundColor="#00BCD4">
                 <TextView
                     android:id="@+id/tnumber6"
                     android:layout_width="match_parent"
@@ -365,12 +380,12 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/number7"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:id="@+id/number7"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
                     android:id="@+id/tnumber7"
@@ -385,22 +400,24 @@
             </androidx.cardview.widget.CardView>
 
 
+
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/number8"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:id="@+id/number8"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
-                    android:id="@+id/tnumber8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="8"
+                    android:id="@+id/tnumber8"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
@@ -408,36 +425,39 @@
             </androidx.cardview.widget.CardView>
 
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/number9"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:layout_marginTop="10dp"
+                android:id="@+id/number9"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
-                    android:id="@+id/tnumber9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_gravity="center"
                     android:text="9"
-                    android:textAlignment="center"
+                    android:id="@+id/tnumber9"
+                    android:textSize="25sp"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    />
 
             </androidx.cardview.widget.CardView>
 
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/minus"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="@android:color/holo_orange_dark"
-                app:cardCornerRadius="35dp">
+                android:layout_marginTop="10dp"
+                android:id="@+id/minus"
+                app:cardBackgroundColor="@android:color/holo_orange_dark">
 
                 <TextView
                     android:id="@+id/tminus"
@@ -450,6 +470,7 @@
                     android:textSize="35sp" />
 
             </androidx.cardview.widget.CardView>
+
 
 
         </LinearLayout>
@@ -465,8 +486,8 @@
                 android:id="@+id/modulo"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
                 app:cardBackgroundColor="#00BCD4"
                 app:cardCornerRadius="35dp">
 
@@ -483,35 +504,37 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/number0"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="10dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:layout_marginTop="10dp"
+                android:id="@+id/number0"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
-                    android:id="@+id/tnumber0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_gravity="center"
                     android:text="0"
-                    android:textAlignment="center"
+                    android:id="@+id/tnumber0"
+                    android:textSize="25sp"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    />
 
             </androidx.cardview.widget.CardView>
 
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/dot"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="10dp"
+                app:cardCornerRadius="35dp"
                 android:layout_marginEnd="15dp"
-                app:cardBackgroundColor="#00BCD4"
-                app:cardCornerRadius="35dp">
+                android:layout_marginTop="10dp"
+                android:id="@+id/dot"
+                app:cardBackgroundColor="#00BCD4">
 
                 <TextView
                     android:id="@+id/tdot"
@@ -548,7 +571,9 @@
             </androidx.cardview.widget.CardView>
 
 
+
+
         </LinearLayout>
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

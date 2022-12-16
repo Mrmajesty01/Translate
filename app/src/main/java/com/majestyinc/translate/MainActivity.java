@@ -56,20 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 bottomNavigationView.setSelectedItemId(R.id.arch);
             }
         }
-        else
-        {
+
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragmentCalc).commitNow();
             bottomNavigationView.setSelectedItemId(R.id.cal);
 
         }
 
-
-
-
-
-
-
-    }
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNav = new BottomNavigationView.OnNavigationItemSelectedListener() {
