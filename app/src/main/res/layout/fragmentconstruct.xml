@@ -1,206 +1,397 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="#fbfff1"
+    android:fillViewport="true">
 
-
-
-    <Spinner
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cspinner"
-        />
+        android:layout_marginTop="20dp"
+        tools:context=".Farashi"
+        tools:ignore="ScrollViewSize">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_marginTop="5dp"
+        <EditText
             android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/edittext"
+            android:hint="SUNAN ABUN AUNAWA"
+            android:id="@+id/constItemName"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="YIN SABON FARASHI DAGA TSOHON FARASHI"
+            app:layout_constraintTop_toBottomOf="@+id/constItemName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/oldSize"
+            android:textColor="#00BCD4"
+            android:id="@+id/constDesc"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="5dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/hiddin"
+            app:layout_constraintBottom_toTopOf="@+id/size"
+            app:layout_constraintTop_toBottomOf="@+id/constDesc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#00BCD4"
+            android:layout_marginTop="20dp"
+            />
 
-                <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:text="Sunan Abin Aunawa"
-                    android:layout_marginEnd="30dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tsohon Awo"
+            android:textStyle="bold"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/constDesc"
+            app:layout_constraintLeft_toRightOf="@+id/hiddin"
+            app:layout_constraintRight_toLeftOf="@+id/newSize"
+            app:layout_constraintBottom_toTopOf="@+id/bp1"
+            android:id="@+id/oldSize"
+            android:textColor="#00BCD4"
+            android:layout_marginTop="20dp"
+            />
 
-                <EditText
-                    android:id="@+id/cnkayaName"
-                    android:layout_width="200dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/box"
-                    android:hint="saka sunan kaya a nan"
-                    android:inputType="textNoSuggestions"
-                    android:textAlignment="center" />
-            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabon Awo"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/constDesc"
+            app:layout_constraintLeft_toRightOf="@+id/oldSize"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/newSize"
+            android:textColor="#00BCD4"
+            android:layout_marginTop="20dp"
+            />
 
-            <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:text="Girma (Size)"
+            android:textColor="#00BCD4"
+            app:layout_constraintBottom_toTopOf="@+id/item1"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hiddin" />
 
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Girma/Yawan Abin Aunawa"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:textSize="15sp"
-                    />
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Sabon girman"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="30dp"
-                        android:textSize="15sp"
-                        />
-                </LinearLayout>
+        <EditText
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:hint="Sa Addadin Girma"
+            app:layout_constraintBottom_toTopOf="@+id/itemSize1"
+            app:layout_constraintTop_toBottomOf="@+id/oldSize"
+            app:layout_constraintLeft_toRightOf="@+id/size"
+            app:layout_constraintRight_toLeftOf="@+id/size2"
+            android:id="@+id/size1"
+            android:layout_marginEnd="10dp"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:textColorHint="#ff0000"
+            android:layout_marginTop="25dp"
+            />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:layout_width="200dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="10dp"
-                        android:background="@drawable/box"
-                        android:id="@+id/cngirmaEt1"
-                        android:layout_marginBottom="10dp"
-                        android:textAlignment="center"
-                        android:inputType="numberDecimal"
-                        />
-
-
-                    <EditText
-                        android:layout_width="90dp"
-                        android:layout_height="50dp"
-                        android:background="@drawable/et"
-                        android:id="@+id/newestgirma"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginBottom="2dp"
-                        android:textAlignment="center"
-                        android:inputType="numberDecimal"
-                        />
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/recycler">
-
-            </androidx.recyclerview.widget.RecyclerView>
+        <EditText
+            android:id="@+id/size2"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            android:layout_marginEnd="5dp"
+            android:hint="Sa Addadin Girma"
+            android:textColorHint="#ff0000"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/item1ans"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newSize" />
 
 
 
-<!--            <LinearLayout-->
-<!--                android:layout_height="80dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:orientation="horizontal">-->
+        <EditText
+            android:id="@+id/item1"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            android:hint="Kayan Aiki"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="15dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/size"
+            />
 
-<!--                <TextView-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_width="80dp"-->
-<!--                    android:text="Sabon Girma/Yawan Abin Aunawa"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:layout_marginStart="5dp"-->
-<!--                    android:layout_marginEnd="30dp"-->
-<!--                    android:layout_marginBottom="10dp"-->
-<!--                    android:textSize="15sp"-->
-<!--                    />-->
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Sa Adadin Kaya"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/size1"
+            app:layout_constraintLeft_toRightOf="@+id/item1"
+            app:layout_constraintRight_toLeftOf="@+id/item1ans"
+            android:id="@+id/itemSize1"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
 
-
-<!--                <EditText-->
-<!--                    android:id="@+id/newgirma"-->
-<!--                    android:layout_width="200dp"-->
-<!--                    android:layout_height="50dp"-->
-<!--                    android:layout_marginBottom="10dp"-->
-<!--                    android:background="@drawable/box"-->
-<!--                    android:inputType="numberDecimal"-->
-<!--                    android:textAlignment="center" />-->
-
-
-<!--            </LinearLayout>-->
-
-
-
-            <Button
-                android:layout_marginTop="20dp"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:layout_gravity="center"
-                android:text="Save"
-                android:textSize="20sp"
-                android:background="@drawable/button"
-                android:id="@+id/cnsave"
-                />
-
-
-            <Button
-                android:layout_marginTop="20dp"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:textColor="@color/black"
-                android:layout_gravity="center"
-                android:text="Sabon Kayan Aiki"
-                android:textSize="20sp"
-                android:background="@drawable/button"
-                android:id="@+id/cadd"
-                />
-
-<!--            <Button-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:text="update"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/button"-->
-<!--                android:id="@+id/cupate"-->
-<!--                />-->
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Amsa"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/size2"
+            app:layout_constraintLeft_toRightOf="@+id/itemSize1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/item1ans"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
 
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/item2"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintBottom_toTopOf="@+id/item3"
+            android:hint="Kayan Aiki"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="15dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item1"
+            />
 
-    </ScrollView>
+        <EditText
+            android:id="@+id/itemSize2"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            android:hint="Sa Adadin Kaya"
+            android:textAlignment="center"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/itemSize3"
+            app:layout_constraintLeft_toRightOf="@+id/item2"
+            app:layout_constraintRight_toLeftOf="@+id/item2ans"
+            app:layout_constraintTop_toBottomOf="@+id/itemSize1" />
 
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Amsa"
+            android:textSize="15sp"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/item3ans"
+            app:layout_constraintTop_toBottomOf="@+id/item1ans"
+            app:layout_constraintLeft_toRightOf="@+id/itemSize2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/item2ans"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/item3"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            android:hint="Kayan Aiki"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="15dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/item4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item2"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Sa Adadin Kaya"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/itemSize4"
+            app:layout_constraintTop_toBottomOf="@+id/itemSize2"
+            app:layout_constraintLeft_toRightOf="@+id/item3"
+            app:layout_constraintRight_toLeftOf="@+id/item3ans"
+            android:id="@+id/itemSize3"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Amsa"
+            android:textSize="15sp"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/item4ans"
+            app:layout_constraintTop_toBottomOf="@+id/item2ans"
+            app:layout_constraintLeft_toRightOf="@+id/itemSize3"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/item3ans"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:id="@+id/item4"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintBottom_toTopOf="@+id/item5"
+            android:hint="Kayan Aiki"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="15dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item3"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Sa Adadin Kaya"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/itemSize5"
+            app:layout_constraintTop_toBottomOf="@+id/itemSize3"
+            app:layout_constraintLeft_toRightOf="@+id/item4"
+            app:layout_constraintRight_toLeftOf="@+id/item4ans"
+            android:id="@+id/itemSize4"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Amsa"
+            android:textSize="15sp"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/item5ans"
+            app:layout_constraintTop_toBottomOf="@+id/item3ans"
+            app:layout_constraintLeft_toRightOf="@+id/itemSize4"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/item4ans"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:id="@+id/item5"
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edittext"
+            android:hint="Kayan Aiki"
+            android:textColorHint="#ff0000"
+            android:layout_marginStart="15dp"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item4"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Sa Adadin Kaya"
+            android:textColorHint="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/constCalculate"
+            app:layout_constraintTop_toBottomOf="@+id/itemSize4"
+            app:layout_constraintLeft_toRightOf="@+id/item5"
+            app:layout_constraintRight_toLeftOf="@+id/item5ans"
+            android:id="@+id/itemSize5"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:hint="Amsa"
+            android:textSize="15sp"
+            android:textColorHint="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/item4ans"
+            app:layout_constraintLeft_toRightOf="@+id/itemSize5"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/item5ans"
+            android:textAlignment="center"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="25dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintTop_toBottomOf="@+id/itemSize5"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp"
+            android:id="@+id/constCalculate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/constClear"
+            android:text="A LATSA DON SAMUN SAKAMO"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintTop_toBottomOf="@+id/constCalculate"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/constClear"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="A LATSA DON GOGE SAKAMO"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

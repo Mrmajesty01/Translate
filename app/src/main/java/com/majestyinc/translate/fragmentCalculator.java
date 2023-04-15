@@ -415,7 +415,7 @@ public class fragmentCalculator extends Fragment {
         cnum4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                try {
+                try {
                     String mask = "000000000000000";
                     if(hiddin.getText().toString().replaceAll(",","").length()==mask.length())
                     {
@@ -451,11 +451,11 @@ public class fragmentCalculator extends Fragment {
 
                     }
                 }
-//                }
-//                catch (Exception e)
-//                {
-//
-//                }
+                }
+                catch (Exception e)
+                {
+
+                }
             }
         });
 

@@ -51,12 +51,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         EditText name,size,item,itemSize,itemSize1;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.cnkayaName);
-            size = itemView.findViewById(R.id.cngirmaEt1);
-            item = itemView.findViewById(R.id.itemname);
-            itemSize = itemView.findViewById(R.id.itemsize);
-            itemSize1  = itemView.findViewById(R.id.itemsize1);
-
+//            name = itemView.findViewById(R.id.cnkayaName);
+//            size = itemView.findViewById(R.id.cngirmaEt1);
+//            item = itemView.findViewById(R.id.itemname);
+//            itemSize = itemView.findViewById(R.id.itemsize);
+//            itemSize1  = itemView.findViewById(R.id.itemsize1);
+//
 
         }
 
