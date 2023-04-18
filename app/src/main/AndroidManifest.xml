@@ -14,18 +14,6 @@
         android:theme="@style/Theme.Translate"
         tools:targetApi="31">
         <activity
-            android:name=".ContraintActivity"
-            android:exported="false" />
-        <activity
-            android:name=".new_kayan_aii"
-            android:exported="false" />
-        <activity
-            android:name=".SaFarashi"
-            android:exported="false" />
-        <activity
-            android:name=".Farashi"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">

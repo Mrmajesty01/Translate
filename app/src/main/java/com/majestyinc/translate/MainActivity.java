@@ -28,11 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     fragmentCalculator fragmentCalc = new fragmentCalculator();
 
-    FragmentConstruct construct = new FragmentConstruct();
 
-    FragmentStats stats = new FragmentStats();
-
-    Bundle bundle;
 
 
     @Override
@@ -40,22 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bundle = getIntent().getExtras();
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(onNav);
 
-        if(bundle!=null) {
-            if (bundle.getString("fragmentc") != null) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,construct).commitNow();
-                bottomNavigationView.setSelectedItemId(R.id.construct);
-            }
 
-            else if(bundle.getString("fragments") != null)
-            {
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,stats).commitNow();
-                bottomNavigationView.setSelectedItemId(R.id.arch);
-            }
-        }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragmentCalc).commitNow();
             bottomNavigationView.setSelectedItemId(R.id.cal);
